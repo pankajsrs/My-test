@@ -1,0 +1,21 @@
+<?php
+/*
+ * Smarty plugin
+ * -------------------------------------------------------------
+ * File:     function.decodetext.php
+ * Type:     function
+ * Name:     decodetext
+ * Purpose:  Decode the text that was encoded for the special characters.
+ * -------------------------------------------------------------
+ */
+
+ function smarty_function_decidetext($params, &$smarty)
+{
+    $string = $params['enstring'];
+    $output = "Your sentence is too long. Shorten It!";
+    if($length < 50)
+        $output = "Your sentence is just right!";
+   
+    return $output;
+}
+?>

@@ -1,0 +1,65 @@
+
+<div id="wrapper" class="homepage friendlanding">
+<div id="home-headlines" class="headlines fl">
+		<div id="home-headlines-text">
+			<header>
+				<hgroup>
+					<b>{if $success_message neq ''}{$success_message}{/if}</b>
+
+                    <h2>Tell us what emails you would like to receive.  You can change this at any time.</h2>
+					
+				</hgroup>
+			</header>
+		</div><!-- #home-headlines-text//-->
+	</div><!-- #home-headlines //-->
+  <div id="main-container" class="fl">
+		<div id="content">
+			<div id="page-heading">
+				<header>
+				    <h3 style="text-align:center">Send me email notifications</h3>
+				</header>
+			</div><!-- #page-heading //-->
+    <div id="foundfriends-content" class="fl" >
+				
+			<form action="{$BASE_URL}user/user-subscription" id="frm_subscription" name="frm_subscription" method="post">
+				<div id="option-form-container" class="fl" >
+					
+                    <div style="text-align: center; ">  	
+   		             <input type="submit" name="notification_button" value="Save" class="button" />
+      	            </div>
+                    
+					
+					      
+     <Br />
+	   	
+	   	   		
+		   	
+           <p><span class="option"><input type="checkbox" name="notification[]" id="purchase_receipt" value="Purchase Receipt" /></span>Purchase receipt notificstion</p>
+           <p><span class="option"><input type="checkbox" name="notification[]" id="usage" value="Usage" /></span>Usage notifications</p> 
+           <p><span class="option"><input type="checkbox" name="notification[]" id="service_termination"  value="Termination Alert" /></span>Service termination alert</p> 
+           
+           <p style="color:#F00">Discounts and Special Offfers</p>
+           
+           <p><span class="option"><input type="checkbox" name="notification[]" id="discout_offer"  value="Discout Offer" /></span>Send me discounts and offers for FreedomPop</p> 
+           <p><span class="option"><input type="checkbox" name="notification[]" id="discout_offer_partner"  value="Discout Offer Partner" /></span>Send me discounts & ofers from qualified FreedomPop partners</p> 
+           
+           <p style="color:#F00">Product and Service Updates</p>
+           
+           <p><span class="option"><input type="checkbox" name="notification[]" id="service_launch"  value="Service launch" /></span>Service launch notifications</p> 
+           
+	    <p style="color:#F00;text-align:center"><A href="{$BASE_URL}user/unsubscribe" >Unsubscribe from all FreedomPop emails</A></p>
+	   
+       
+      
+       </form>	
+						
+					
+				</div>
+        
+        </div>
+        	
+	   		<div class="fix"></div>
+		</div><!-- #content //-->
+	</div><!-- #main-container //-->
+     
+    

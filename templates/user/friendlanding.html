@@ -1,0 +1,87 @@
+<script type="text/javascript" src="{$public_url}js/easytooltip.js"></script>
+{if $error eq ''}
+
+<div id="wrapper" class="homepage">
+<div id="home-headlines" class="headlines fl">
+		<div id="home-headlines-text">
+			<header>
+				<hgroup>
+					
+                    <h2> Your Friend {$first_name} {$last_name} invited you to join FreedomPop for
+FREE broadband service </h2>
+				</hgroup>
+			</header>
+		</div><!-- #home-headlines-text//-->
+	</div><!-- #home-headlines //-->
+	
+	<div id="main-container" class="fl">
+		<div id="content" class="fl">
+			<div id="page-heading">
+				<header>
+					<h3>Get early access and service updates by providing information below</h3>
+				</header>
+			</div><!-- #page-heading //-->
+			
+			<div id="content-left" class="fl">
+            <form action="{$BASE_URL}user/friendlanding/?sid={$signupid}" id="frm_get_updates" name="frm_get_updates" method="post">
+             <div id="form-container" class="fl">
+	<div class="small-text-field fl">
+		<p class="label">First Name</p>
+		<p><input type="text" name="first_name" id="first_name" value="{$fname}" class="input_box validate[required] smallfield"  /></p>
+    </div>
+
+	<div class="small-text-field last fl">
+			<p class="label">Last Name</p>
+			<p><input type="text" name="last_name" id="last_name"  value="{$lname}" class="input_box validate[required] smallfield"  /></p>
+	</div>
+  
+   <div class="normal-field fl">
+			<p class="label">Email Address</p>
+			<p><input type="text" name="email" id="email"  value="{$email}" class="input_box validate[required, custom[email]] normalfield"  /></p>
+	</div>
+    
+    <div class="normal-field last-field fl">
+		<p class="label">Zip Code</p>
+		<p><input type="text" name="postal_code" id="postal_code"  value="{$data.postal_code}" class="input_box validate[required, custom[onlyNumberSp, minSize[5], maxSize[5]] normalfield"  /></p>
+    </div>
+
+	
+   
+    
+    </div><!-- #form-container //-->
+   	<div class="normal-field submitfield fl" style="text-align:center">
+							<input type="submit" name="save_friend"   value="" tabindex="5"  id="get_updates" />
+						</div>	
+				</form>
+               
+                </div>
+                 {else}
+ <font color="#990000" style="font-size:16px;font-weight:bold">{$error}</font>
+ {/if}  
+                </div>
+                </div>
+   
+            
+{literal}
+<script>
+jQuery(document).ready(function() {
+	jQuery('#frm_get_updates').submit(function(){
+		jQuery(this).find('input:text').each(function(){
+			jQuery(this).val(jQuery.trim(jQuery(this).val()));
+	      });
+	});
+	jQuery("#frm_get_updates").validationEngine();
+	
+	jQuery("a#link2").easyTooltip({
+		tooltipId: "easyTooltip2",
+		content: 'You will receive service updates, newsletters and important account information emails from FreedomPop'
+	});
+});
+
+function reloadCaptcha()
+{
+	document.getElementById('captcha').src = document.getElementById('captcha').src+ '?' +new Date();
+}
+</script>
+{/literal}
+  

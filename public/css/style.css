@@ -1,0 +1,959 @@
+/* =============================================================================
+HTML5 Reset
+========================================================================== */
+
+a,abbr,acronym,address,article,aside,audio,b,blockquote,body,canvas,caption,cite,code,dd,del,details,dfn,div,dl,dt,em,embed,fieldset,figcaption,figure,font,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,hr,html,i,iframe,img,ins,label,legend,li,mark,menu,nav,object,ol,output,p,pre,section,small,span,strong,sup,table,tbody,td,tfoot,th,thead,time,tr,tt,u,ul,var,video,xmp {
+border: 0;margin: 0;padding: 0;font-weight:normal;font-style:normal;font-variant:normal;}
+
+/* =============================================================================
+   HTML5 display definitions
+   ========================================================================== */
+
+article, aside, details, figcaption, figure, footer, header, hgroup, nav, section { display: block; }
+audio, canvas, video { display: inline-block; *display: inline; *zoom: 1; }
+audio:not([controls]) { display: none; }
+[hidden] { display: none; }
+
+
+/* =============================================================================
+ Base
+========================================================================== */
+
+html { font-size: 100%; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
+html, button, input, select, textarea { font-family: sans-serif; color: #222; }
+body { margin: 0; font-size: 1em; line-height: 1.4; }
+
+/*
+
+
+/* =============================================================================
+   Links
+   ========================================================================== */
+
+a { color: #00e; }
+a:visited { color: #551a8b; }
+a:hover { color: #06e; }
+a:focus { outline: thin dotted; }
+
+/* Improve readability when focused and hovered in all browsers: h5bp.com/h */
+a:hover, a:active { outline: 0; }
+
+
+/* =============================================================================
+   Typography
+   ========================================================================== */
+
+abbr[title] { border-bottom: 1px dotted; }
+
+b, strong { font-weight: bold; }
+
+blockquote { margin: 1em 40px; }
+
+dfn { font-style: italic; }
+
+hr { display: block; height: 1px; border: 0; border-top: 1px solid #ccc; margin: 1em 0; padding: 0; }
+
+ins { background: #ff9; color: #000; text-decoration: none; }
+
+mark { background: #ff0; color: #000; font-style: italic; font-weight: bold; }
+
+/* Redeclare monospace font family: h5bp.com/j */
+pre, code, kbd, samp { font-family: monospace, serif; _font-family: 'courier new', monospace; font-size: 1em; }
+
+/* Improve readability of pre-formatted text in all browsers */
+pre { white-space: pre; white-space: pre-wrap; word-wrap: break-word; }
+
+q { quotes: none; }
+q:before, q:after { content: ""; content: none; }
+
+small { font-size: 85%; }
+
+/* Position subscript and superscript content without affecting line-height: h5bp.com/k */
+sub, sup { font-size: 75%; line-height: 0; position: relative; vertical-align: baseline; }
+sup { top: -0.5em; }
+sub { bottom: -0.25em; }
+
+
+/* =============================================================================
+   Lists
+   ========================================================================== */
+
+ul, ol { margin: 1em 0; padding: 0 0 0 40px; }
+dd { margin: 0 0 0 40px; }
+nav ul, nav ol { list-style: none; list-style-image: none; margin: 0; padding: 0; }
+
+
+/* =============================================================================
+   Embedded content
+   ========================================================================== */
+
+/*
+ * 1. Improve image quality when scaled in IE7: h5bp.com/d
+ * 2. Remove the gap between images and borders on image containers: h5bp.com/i/440
+ */
+
+img { border: 0; -ms-interpolation-mode: bicubic; vertical-align: middle; }
+
+/*
+ * Correct overflow not hidden in IE9
+ */
+
+svg:not(:root) { overflow: hidden; }
+
+
+/* =============================================================================
+   Figures
+   ========================================================================== */
+
+figure { margin: 0; }
+
+
+/* =============================================================================
+   Forms
+   ========================================================================== */
+
+form { margin: 0; }
+fieldset { border: 0; margin: 0; padding: 0; }
+
+/* Indicate that 'label' will shift focus to the associated form element */
+label { cursor: pointer; }
+
+/*
+ * 1. Correct color not inheriting in IE6/7/8/9
+ * 2. Correct alignment displayed oddly in IE6/7
+ */
+
+legend { border: 0; *margin-left: -7px; padding: 0; white-space: normal; }
+
+/*
+ * 1. Correct font-size not inheriting in all browsers
+ * 2. Remove margins in FF3/4 S5 Chrome
+ * 3. Define consistent vertical alignment display in all browsers
+ */
+
+button, input, select, textarea { font-size: 100%; margin: 0; vertical-align: baseline; *vertical-align: middle; }
+
+/*
+ * 1. Define line-height as normal to match FF3/4 (set using !important in the UA stylesheet)
+ */
+
+button, input { line-height: normal; }
+
+/*
+ * 1. Display hand cursor for clickable form elements
+ * 2. Allow styling of clickable form elements in iOS
+ * 3. Correct inner spacing displayed oddly in IE7 (doesn't effect IE6)
+ */
+
+button, input[type="button"], input[type="reset"], input[type="submit"] { cursor: pointer; -webkit-appearance: button; *overflow: visible; }
+
+/*
+ * Re-set default cursor for disabled elements
+ */
+
+button[disabled], input[disabled] { cursor: default; }
+
+/*
+ * Consistent box sizing and appearance
+ */
+
+input[type="checkbox"], input[type="radio"] { box-sizing: border-box; padding: 0; *width: 13px; *height: 13px; }
+input[type="search"] { -webkit-appearance: textfield; -moz-box-sizing: content-box; -webkit-box-sizing: content-box; box-sizing: content-box; }
+input[type="search"]::-webkit-search-decoration, input[type="search"]::-webkit-search-cancel-button { -webkit-appearance: none; }
+
+/*
+ * Remove inner padding and border in FF3/4: h5bp.com/l
+ */
+
+button::-moz-focus-inner, input::-moz-focus-inner { border: 0; padding: 0; }
+
+/*
+ * 1. Remove default vertical scrollbar in IE6/7/8/9
+ * 2. Allow only vertical resizing
+ */
+
+textarea { overflow: auto; vertical-align: top; resize: vertical; }
+
+/* Colors for form validity */
+input:valid, textarea:valid {  }
+input:invalid, textarea:invalid { background-color: #f0dddd; }
+
+
+/* =============================================================================
+   Tables
+   ========================================================================== */
+
+table { border-collapse: collapse; border-spacing: 0; }
+td { vertical-align: top; }
+
+
+/* =============================================================================
+   Chrome Frame Prompt
+   ========================================================================== */
+
+.chromeframe { margin: 0.2em 0; background: #ccc; color: black; padding: 0.2em 0; }
+
+
+/* ==|== primary styles =====================================================
+   Author:
+   ========================================================================== */
+ 
+.fl{float:left;}
+.fr{float:right;}
+.fix{clear:both;}
+
+body{
+	background:#ffffff;
+	font-family:arial;
+	font-size:12px;
+	color:#ffffff;
+}
+
+#article-container h1 {
+	font-size: 42px;
+	line-height:35px;
+	margin-bottom:20px;
+}
+
+#article-container h2 {
+	font-size: 33px;
+	line-height:32px;
+	margin-bottom:20px;
+}
+
+#article-container h3 {
+	font-size: 26px;
+	font-weight: normal;
+	line-height: 30px;
+	margin-bottom:20px;
+}
+
+#article-container h4 {
+	font-size: 18px; 
+	font-weight: normal;
+	line-height: 22px;
+	margin-bottom:20px;
+}
+
+#article-container h5 {
+	font-size: 16px;
+	line-height: 25px;	
+	margin-bottom:20px;
+}
+
+#article-container h6 {
+	font-size: 14px; 
+	letter-spacing: 0.5px;
+	line-height: 22px;
+	margin-bottom:20px;
+}
+#article-container p{
+	font-family:arial;
+	font-size:12px;
+	line-height:20px;
+	color:#ffffff;
+	margin-bottom:10px;
+}
+
+#article-container a {
+	color: #a1523d;
+	text-decoration: none;
+}
+
+#article-container a:hover {
+	text-decoration: underline;
+}
+
+#wrapper{
+	width:980px;
+	margin:20px auto;
+}
+
+#header{padding-left:20px;}
+#home-headlines{
+	background:url(../images/header-bg.png) no-repeat;
+	width:984px;
+	height:178px;
+	margin-left:-2px;
+	margin-top:20px;
+}
+#home-headlines-text{
+	width:560px;
+	height:100px;
+	margin:50px auto;
+}
+#home-headlines-text h2{
+	color:#fff;
+	font-size:36px;
+	text-align:center;
+	margin-bottom:0px;
+	line-height:30px;
+}
+#home-headlines-text h2.second-headline{
+	color:#a5d942;
+}
+
+#main-container{
+	width:980px;
+	background:url(../images/bg.png) no-repeat;
+	height:485px;
+	margin-top:-4px;
+}
+
+.homepage #content{
+	width:875px;
+	margin-left:65px;
+}
+.homepage #page-heading{
+	margin-top:0px;
+	margin-left:40px;
+}
+.homepage #page-heading h3, .page #page-heading h3{
+	color:#ffffff;
+	font-size:24px;
+	font-style:italic;
+	font-family:arial;
+}
+
+#content-left{
+	background:url(../images/form-bg-home.png) no-repeat;
+	width:370px;
+	margin-left:225px;
+	margin-top:15px;
+	padding:18px 18px 0 18px;
+}
+
+.small-text-field{
+	width:178px;
+	float:left;
+}
+.small-text-field.last{
+	margin-left:12px;
+}
+
+.smallfield{
+	width:168px;
+	background:url(../images/input-small.png) no-repeat;
+	border:none;
+	height:35px;
+	padding:5px;
+	margin-bottom:10px;
+	font-size:18px;
+}
+.normalfield{
+	width:356px;
+	height:35px;
+	background:url(../images/input-large.png) no-repeat;
+	border:none;
+	padding:5px;
+	font-size:18px;
+}
+.normal-field{
+	width:365px;
+	float:left;
+	margin-bottom:10px;
+}
+#form-container .label{
+	color:#fff;
+	font-size:18px;
+	margin-bottom:4px;
+}
+
+
+	
+.normal-field.submitfield{
+	margin-top:33px;
+	margin-bottom:0!important;
+	
+	align:auto;
+	
+}
+#get_updates{
+	background:url(../images/get-updates-button.png) no-repeat;
+	width:231px;
+	height:56px;
+	border:0;
+}
+#right-content{
+	width:135px;
+	margin-top:4px;
+	margin-right:45px;
+}
+#right-content h5{
+	font-size:24px;
+	color:#a5d942;
+	text-align:center;
+}
+#icons{margin:0;padding:0;}
+#icons li{
+	display:block;
+	list-style:none;
+	padding:4px 0 3px 3px;
+	float:left;
+}
+#icons li.cnet{
+	width:66px;
+	padding-left:7px;
+}
+#icons li.forbes{
+	padding-left:22px;
+}
+#icons li.bloomberg-business{
+	padding-left:5px;
+}
+#icons li.techcrunch{
+	padding-left:4px;
+}
+#icons li.gigaom{
+	padding-left:4px;
+}
+#icons li.bloomberg{
+	padding-left:11px;
+}
+#rounded-top{
+	width:134px;
+	height:11px;
+	background:url(../images/rounded-top.png) no-repeat;
+}
+#rounded-bottom{
+	width:134px;
+	height:12px;
+	background:url(../images/rounded-bottom.png) no-repeat;
+}
+#icons-container{
+	background:#ffffff;
+	width:134px;
+}
+#fine-print{
+	width:900px;
+	margin-top:15px;
+}
+#fine-print p{
+	text-align:center;
+	color:#fff;
+	font-size:12px;
+	font-family:arial;
+	font-style:italic;
+}
+#footer-container{
+	background:url(../images/footer-bg.png) no-repeat;
+	width:944px;
+	height:71px;
+	float:left;
+	margin-left:17px;
+	margin-top:-14px;
+	margin-bottom:20px;
+}
+#footer{
+	width:540px;
+	margin:10px auto;
+}
+#copyright, #footer-menu-container{
+	margin-top:15px;
+}
+#copyright p{
+	font-size:12px;
+	color:#999999;
+	
+}
+#footer-menu{margin-left:10px;}
+#footer-menu li{
+	list-style:none;
+	float:left;
+	padding:0 10px 0 10px;
+	border-left:1px solid #c8c8c8;
+}
+
+#footer-menu li a{
+	font-size:12px;
+	color:#008aff;
+	font-style:italic;
+	text-decoration:none;
+	line-height:10px;
+}
+#footer-menu li a:hover{
+	text-decoration:underline;
+}
+
+/* Find friends styles */
+.page #content{
+	width:865px;
+	margin:0 auto !important;
+}
+.page #main-container{
+	background:url(../images/other-page-bg.png) no-repeat;
+	height:585px;
+}
+#border{
+	width:980px;
+	margin-left:0px;
+	height:8px;
+	background:#afafaf;
+}
+
+.page #page-heading h3{
+	text-align:center;
+}
+.page #home-headlines{
+	height:70px !important;
+	
+}
+.page #home-headlines-text{
+	margin-top:20px;
+	width:590px;
+}
+.page #page-heading{
+	padding-top:20px;
+	padding-bottom:20px;
+}
+.page #page-heading h3{
+	line-height:30px;
+}
+.page #home-headlines-text h2{
+	font-weight:bold;
+	font-size:36px;
+}
+#find-friends-form-container{
+	width:366px !important;
+	height:199px;
+	margin:10px auto 20px auto;
+	background:url(../images/form-bg-findfriends.png) no-repeat;
+	padding:15px 20px;
+}
+#find_friends_button{
+	width:276px;
+	height:56px;
+	background:url(../images/find-friends-now.png) no-repeat;
+	border:0;
+   	
+}
+.page .normal-field.submitfield{
+	margin-top:40px;
+	margin-left:48px;
+}
+#bottom-content{
+	width:405px;
+	margin:80px auto 0 auto;
+}
+#bottom-content p{
+	text-align:center;
+	font-size:14px;
+	color:#ffffff;
+}
+#bottom-content #logos{margin:40px 0 0 0;padding:0;}
+#bottom-content #logos li{
+	float:left;
+	list-style:none;
+	padding:0;
+	margin:0 8px 0 0;
+}
+
+a#skiplink{
+	display:block;
+	float:right;
+	font-size:24px;
+	color:#012f57;
+	margin-top:-30px;
+	margin-right:-240px;
+	text-decoration:none;
+}
+
+/* Thank you page styles */
+
+#thankyou-page{
+	margin-top:115px;
+}
+#thankyou-page h2, #thankyou-page h3{
+	color:#ffffff;
+	font-size:36px;
+	font-weight:bold;
+	text-align:center;
+}
+#thankyou-page h3{
+	font-size:30px;
+}
+
+/* Friend landing page */
+h2.landingheading{
+	color:#ffffff;
+	font-size:30px !important;
+	font-family:arial;
+	line-height:40px !important;
+	font-weight:bold;
+}
+.friendlanding #home-headlines-text {
+	width:920px;
+}
+
+/* Term if use */
+.termofuse #content{
+	width:875px;
+	height:460px;
+	margin-left:70px;
+}
+
+/* Found friends page styles */
+.foundfriends #home-headlines-text{
+	width:890px;
+}
+.foundfriends #home-headlines-text h2{
+	font-family:arial;
+	font-weight:bold;
+	font-size:26px;
+}
+
+.foundfriends #page-heading {margin-top:10px;}
+.foundfriends #page-heading h3{
+	font-size:24px;
+	font-family:arial;
+	font-style:italic;
+	font-weight:bold;
+	margin-bottom:5px;
+	line-height:25px;
+}
+.foundfriends #page-heading p{
+	text-align:center;
+	font-weight:bold;
+	font-size:14px;
+}
+#foundfriends-content{
+	width:570px;
+	margin-left:150px;
+}
+#connect-selected-friend{
+	text-indent:-999999px;
+	width:405px;
+	height:56px;
+	background:url(../images/connect-with-selected-friends.png) no-repeat;
+	display:block;
+	margin-left:80px;
+}
+
+.ie7 #connect-selected-friend{
+	line-height:0;
+	font-size:0;
+}
+
+/**
+ * CSS File for ezMark jQuery Plugin
+ *
+ **/
+.ez-hide { opacity: 0; filter:alpha(opacity=0); }
+.ez-checkbox {
+	background: transparent url('../images/checkbox.png') 0 -2px no-repeat;
+	display:inline-block;
+	width:18px;
+	height:18px;
+}
+
+.ez-checked { background-position: 0 -28px; }
+
+
+#option-form-container p span.option{
+	margin-right:5px;
+}
+
+#option-form-container p{
+	display:block;
+	margin-bottom:5px;
+	font-size:18px;
+}
+
+#option-form-container p.colored{
+	color:#a3d347 ;
+}
+
+#option-form-container p.selectall{
+	margin-bottom:20px;
+	font-size:14px;
+	font-weight:bold;
+}
+#option-form-container p.selectall .option{
+	margin-top:-3px;
+	float:left;
+}
+#option-form-container{
+	background:url(../images/option-from-bg.png) no-repeat;
+	width:556px;
+	height:306px;
+	padding:10px 20px;
+	margin-top:20px;
+}
+
+span.register-alredy{
+	text-align:right;
+	float:right;
+	font-weight:bold;
+	font-style:italic;
+	font-size:14px;
+	color:#a6d64a;
+	margin-right:35px;
+	background:url(../images/asterisk.png) left center no-repeat;
+	padding-left:15px;
+}
+.ie7 span.register-alredy{
+	margin-top:-20px;
+	display:block;
+}
+
+.foundfriends a#skiplink{
+	float:left;
+    margin-top:315px;
+	margin-left:70px;
+}
+
+.option{
+	width:19px;
+	height:19px;
+	display:block;
+	float:left;
+	
+}
+
+
+/*  scrollgeneric is used for corrective styling of elements, and should not be modified or removed */ 
+.scrollgeneric {
+	line-height: 1px;
+	font-size: 1px;
+	position: absolute;
+	top: 0; left: 0;
+}
+
+.vscrollerbase {
+	width:14px;
+	background-image: url(../images/scrollbar-bg.png) ;
+}
+
+#select-container .vscrollerbase {
+	width:16px;
+	background-image: url(../images/scrollbar-bg-connect.png) ;
+}
+
+
+.vscrollerbar {
+	background-image: url(../images/scrollbar.png);
+	width: 16px;
+	/* following is the bit that allows us fixed height scrollbars */
+	height: 150px !important;
+	/* for fixed height, we force the vscrollerbar class with an !important decleration, and fleXcroll follows suit.*/
+
+	background-image: url(../images/scrollbar.png);
+	/* unfortunately, due to limitations of CSS, we cannot provide a color for the background when we are
+	using alpha images, thay have to be transparent.*/
+}
+
+#select-container  .vscrollerbar {
+background-image: url(../images/scrollbar-connect.png);
+width: 16px;
+/* following is the bit that allows us fixed height scrollbars */
+height: 150px !important;
+/* for fixed height, we force the vscrollerbar class with an !important decleration, and fleXcroll follows suit.*/
+
+background-image: url(../images/scrollbar.png);
+/* unfortunately, due to limitations of CSS, we cannot provide a color for the background when we are
+using alpha images, thay have to be transparent.*/
+}
+
+
+
+
+/* do not forget to give horizontal scrollbars some color properties even if you don't plan on using them */
+.hscrollerbase {height: 22px;}
+.hscrollerbar {height: 22px; background-color: #84ADD6;}
+
+.vscrollerbar, .hscrollerbar {
+/* paddings of these elements will decide how far the scrollbar will stop in both ends, and are not actually
+used for styling, and are set to 0 by the script, here we will set them the size of our faux arrows */
+padding: 0px;
+z-index: 2;
+}
+
+/* properties for scroller jog box, just in case */
+.scrollerjogbox {
+width: 22px;
+height: 22px;
+top: auto; left: auto;
+bottom: 0px; right: 0px;
+background: #698AAA;
+}
+
+#article-container {
+/* Typical fixed height and fixed width example */
+	width: 900px;
+	height: 419px;
+	overflow: auto;
+	/* IE overflow fix, position must be relative or absolute*/
+	position: relative;
+	/*background-color: #E7EADE;*/
+	margin: 60px auto;
+	
+
+}
+
+#post-content{
+	width:800px;
+	margin-left:10px;
+	padding-top:10px;
+}
+
+#select-container {
+/* Typical fixed height and fixed width example */
+	width: 527px;
+	height: 230px;
+	overflow: auto;
+	/* IE overflow fix, position must be relative or absolute*/
+	position: relative;
+	/*background-color: #E7EADE;*/
+	/*margin: 0.3em auto;*/
+
+}
+#option-content-container{
+	width:490px;
+}
+
+/* Scroll Bar Master Styling Ends Here */
+
+.fixedwidth {
+/* a wide div is used for creating horizontal scrollbars for demonstration purposes */
+	width: 550px;
+	height: auto;
+	position: relative;
+	color: black;
+	padding: 1px;
+}
+
+/* ==|== media queries ======================================================
+   EXAMPLE Media Query for Responsive Design.
+   This example overrides the primary ('mobile first') styles
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+  /* Style adjustments for viewports that meet the condition */
+}
+
+
+
+/* ==|== non-semantic helper classes ========================================
+   Please define your styles before this section.
+   ========================================================================== */
+
+/* For image replacement */
+.ir { display: block; border: 0; text-indent: -999em; overflow: hidden; background-color: transparent; background-repeat: no-repeat; text-align: left; direction: ltr; *line-height: 0; }
+.ir br { display: none; }
+
+/* Hide from both screenreaders and browsers: h5bp.com/u */
+.hidden { display: none !important; visibility: hidden; }
+
+/* Hide only visually, but have it available for screenreaders: h5bp.com/v */
+.visuallyhidden { border: 0; clip: rect(0 0 0 0); height: 1px; margin: -1px; overflow: hidden; padding: 0; position: absolute; width: 1px; }
+
+/* Extends the .visuallyhidden class to allow the element to be focusable when navigated to via the keyboard: h5bp.com/p */
+.visuallyhidden.focusable:active, .visuallyhidden.focusable:focus { clip: auto; height: auto; margin: 0; overflow: visible; position: static; width: auto; }
+
+/* Hide visually and from screenreaders, but maintain layout */
+.invisible { visibility: hidden; }
+
+/* Contain floats: h5bp.com/q */
+.clearfix:before, .clearfix:after { content: ""; display: table; }
+.clearfix:after { clear: both; }
+.clearfix { *zoom: 1; }
+
+
+
+/* ==|== print styles =======================================================
+   Print styles.
+   Inlined to avoid required HTTP connection: h5bp.com/r
+   ========================================================================== */
+
+@media print {
+  * { background: transparent !important; color: black !important; box-shadow:none !important; text-shadow: none !important; filter:none !important; -ms-filter: none !important; } /* Black prints faster: h5bp.com/s */
+  a, a:visited { text-decoration: underline; }
+  a[href]:after { content: " (" attr(href) ")"; }
+  abbr[title]:after { content: " (" attr(title) ")"; }
+  .ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after { content: ""; }  /* Don't show links for images, or javascript/internal links */
+  pre, blockquote { border: 1px solid #999; page-break-inside: avoid; }
+  thead { display: table-header-group; } /* h5bp.com/t */
+  tr, img { page-break-inside: avoid; }
+  img { max-width: 100% !important; }
+  @page { margin: 0.5cm; }
+  p, h2, h3 { orphans: 3; widows: 3; }
+  h2, h3 { page-break-after: avoid; }
+}
+
+
+/*  $$$$$$$$$$$$$$$$ */
+
+.msg {padding:10px; padding-left:35px;}
+.msg.warning {background:url("../images/ico-warning.gif") 10px 50% no-repeat;}
+.msg.info {background:url("../images/ico-info.gif") 10px 50% no-repeat;}
+.msg.done {background:url("../images/ico-done.gif") 10px 50% no-repeat;}
+.msg.error {background:url("../images/ico-delete.gif") 10px 10px no-repeat; }
+
+.msg.warning {border:2px solid #F2DD8C; background-color:#FFF5CC;}
+.msg.warning a {color:#df0000;} .msg.warning a:hover, .msg.warning a:active, .msg.warning a:focus {color:#303030;}
+.msg.info {border:2px solid #B8E2FB; background-color:#E8F6FF;}
+.msg.done {border:2px solid #BBDF8D; background-color:#EAF7D9;}
+.msg.error {border:2px solid #FFAEAE; background-color:#FEEBEB;}
+
+.button {
+   
+   
+    -moz-box-shadow:inset 1px 1px 0 rgba(255,255,255,0.3);
+    -webkit-box-shadow:inset 1px 1px 0 rgba(255,255,255,0.3);
+    box-shadow:inset 1px 1px 0 rgba(255,255,255,0.3);
+    -moz-box-sizing: border-box !important;
+    cursor: pointer;
+    display: inline-block;
+    font: 15px/100% Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	
+	 
+    
+    outline: none !important;
+  
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    white-space: nowrap;
+	width:70px;
+	background-color:#98C83C;
+}
+
+.button-round {
+    -moz-border-radius: 16px;
+    -webkit-border-radius: 16px;
+    -khtml-border-radius: 16px;
+    border-radius: 16px;
+    padding: 7px 0;
+    width: 30px;
+}
+.button:hover {
+    text-decoration: none;
+}
+
+.msgfield{
+	width:356px;
+	height:245px;
+  -moz-border-radius: 16px;
+   border-radius: 16px;
+	
+	padding:5px;
+	font-size:18px;
+}
+
+.btnfield{
+	width:190px;
+	height:50px;
+  -moz-border-radius: 16px;
+   
+  -webkit-border-radius: 16px;
+   font-weight:bolder;
+   font-size:24px;
+   color:#FFF;
+   background-color:#96C63A;
+   padding:5px;
+}
+
+
+

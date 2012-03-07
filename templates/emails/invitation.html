@@ -1,0 +1,32 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Invitation</title>
+</head>
+<body>
+Hey,<br /><br />
+
+I got you an invitation for FreedomPop’s FREE broadband service
+<br />
+Are you friends with {$first_name} {$last_name} and do you want FREE BroadBand?
+<br />
+<a href="{$BASE_URL}user/friendlanding/?sid={$signup_id}&param={$param}" >Yes</a> / <a href="{$BASE_URL}user/remove/?em={$email}">No</a><br />
+Cool, now we can get free access
+<br /><br />
+Steven
+{if $signup neq 'f'}
+<br /><br />
+<a href="{$BASE_URL}user/friendlanding/?sid={$signup_id}&param={$param}" >Sign Up</a>
+{/if}
+<br><br>
+To stop these emails, please <a href="{$BASE_URL}user/unsubscribe/?sid={$signup_id}">click here</a><br />
+You have received this email at the email address:xxxx@xxx.com<br />
+Copyright 2012 FreedomPop <br />
+18757 Burbank Blvd., Ste 116, Tarzana, CA 91356<br />
+{if $signup eq 'f'}
+<a href="{$BASE_URL}user/unsubscribe/?sid={$already_signup_id}">Unsubscribe</a> | <a href="{$BASE_URL}page/privacy-policy">Privacy Policy</a><br />
+{/if}
+</body>
+</html>
+

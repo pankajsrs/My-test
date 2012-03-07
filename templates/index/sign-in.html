@@ -1,0 +1,67 @@
+<div id="home-headlines" class="headlines fl">
+		<div id="home-headlines-text">
+			<header>
+				<hgroup>
+					<h2>The internet is a right, not a privilege -</h2>
+					<h2 class="second-headline">Free mobile services for all!</h2>
+				</hgroup>
+			</header>
+		</div><!-- #home-headlines-text//-->
+	</div><!-- #home-headlines //-->
+	
+	<div id="main-container" class="fl">
+		<div id="content" class="fl">
+			<div id="page-heading">
+				<header>
+					<h3 style="text-align:center">LOGIN</h3>
+				</header>
+			</div><!-- #page-heading //-->
+ 
+ <div id="content-left" class="fl">
+   	 
+   	<form action="{$BASE_URL}index/sign-in/" id="frm_sign_in" name="frm_sign_in" method="post">
+  	
+	<div id="form-container" class="fl">
+	
+	<div class="normal-field fl">
+		<p class="label">Email Address</p>
+		<p><input type="text" name="email" id="email"  value="{$data.email}" class="input_box validate[required, custom[email]] normalfield"  /></p>
+    </div>
+	
+	<div class="normal-field fl">
+		<p class="label">Password</p>
+		<p><input type="password" name="password" id="password"  value="" class="input_box validate[required] normalfield"  /></p>
+    </div>
+	
+	
+	
+	
+      </div><!-- #form-container //-->
+					
+						<div class="normal-field submitfield fl">
+							<input type="submit" id="" value="login" style="width:231px;height:56px;color:#fff; background-color:#99C93D" >
+						</div>
+						
+						<div class="normal-field fl">
+		
+                       </div>
+	
+				</form>
+				
+			</div><!-- #content-left //-->
+			</div>
+			</div>
+{literal}
+<script>
+jQuery(document).ready(function() {
+	jQuery('#frm_sign_in').submit(function(){
+		jQuery(this).find('input:text').each(function(){
+			jQuery(this).val(jQuery.trim(jQuery(this).val()));
+	      });
+	});
+	jQuery("#frm_sign_in").validationEngine();
+});
+ 
+</script>
+{/literal}
+  

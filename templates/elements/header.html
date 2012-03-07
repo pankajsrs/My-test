@@ -1,0 +1,14 @@
+<div id="header">
+		<header>
+			<h1>
+				<a href="#" title="Freedom Pop - Free access for all">
+					<img src="{$BASE_URL}/public/images/logo.png" alt="Freedom Pop - Free access for all" />
+				</a>
+			</h1>
+		</header>
+
+</div><!-- #header //-->
+
+{if $flashMessage|@count gt 0}
+<div class="msg {$flashMessage.class}" id="flashMessage" style="margin-top:20px;color:black;" >{$flashMessage.message}</div>
+{/if}

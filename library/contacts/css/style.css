@@ -1,0 +1,44 @@
+a
+	{
+	color:#0099CC;
+	}
+body
+		{
+		background-color:#FFFFFF;
+		font-family:Arial, Helvetica, sans-serif;
+		}
+label
+	{
+	font-weight:bold;
+	font-size:12px;
+	}		
+.curve_input
+	{
+	background:url(../images/input_curve_back.png);
+	background-repeat:no-repeat;
+	width:187px;
+	height:33px;
+	}
+.input_box
+	{
+	padding:4px 6px;
+	font-size:12px;
+	width:185px;
+	background:none;
+	margin:5px 0 0 0;
+	border:none;
+	font-family:Arial, Helvetica, sans-serif;
+	}
+.get_button
+	{
+	background-image:url(../images/get_button.png);
+	width:214px;
+	height:48px;
+	background-repeat:no-repeat;
+	border:none;
+	background-color:#FFFFFF;
+	cursor:pointer;
+	font-size:18px;
+	color:#fdffe0;
+	}		
+		

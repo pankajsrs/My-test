@@ -1,0 +1,122 @@
+
+<div id="wrapper" class="page foundfriends">
+	
+	
+	<div id="home-headlines" class="headlines fl">
+		<div id="home-headlines-text">
+			<header>
+				<hgroup>
+					{if $message_send neq ''}
+  	                   <b>{$message_send}</b>
+                    {/if}
+                    <h2>Connect with your  {$total} friends and reserve your priority position of {$priority+1327}</h2> 
+				</hgroup>
+			</header>
+		</div><!-- #home-headlines-text//-->
+	</div><!-- #home-headlines //-->
+	
+	
+	<div id="main-container" class="fl">
+		<div id="content">
+			<div id="page-heading">
+				<header>
+					<h3>Choose which friends you want to connect with on FreedomPop <br /> and click the "connect with selected friends" button</h3>
+					<p>You'll improve your priority position for each FreedomPop friend you connect with. If you select someone <br /> 
+					who is not here, they will be invited to join you. Every friend you connect with will improve your priority position.</p>
+				</header>
+			</div><!-- #page-heading //-->
+			
+			 <form action="{$BASE_URL}user/connect-to-friends/" id="frm_connect" name="frm_connect" method="post">
+			<div id="foundfriends-content" class="fl">
+				<a onclick="check();"  style="cursor:pointer;" id="connect-selected-friend">Connect with selected friends</a>
+				
+				<div id="option-form-container" class="fl">
+					<p class="selectall"><span class="option"><input type="checkbox"  name="select_checkbox" id="select_checkbox"  class="styled" /></span> SELECT ALL <span class="register-alredy">Already Registered!</span></p>
+					
+					<div id="select-container" class="flexcroll">
+						<div id="option-content-container">
+							
+								{foreach from=$list_contacts key = key  item=value}   	   		
+		   	
+         <p {if $value.is_registered eq '1'} class="colored" {/if}> <span class="option"><input type="checkbox" name="list_contacts[]" value="{$value.email}---{$value.name}"  class="styled " id="ckd_{$key}" /></span> 
+		 {$value.name}
+		 {if $value.name neq $value.email}
+		 [{$value.email}]
+		 {/if}
+		 </p> 
+           
+	   	{/foreach}
+        
+         <input type="hidden" name="email_box" value="{$email_from}">
+        <input type="hidden" name="password_box" value="{$password_box}">
+							
+						</div><!-- #option-content-container //-->	
+					</div><!-- #select-container //-->
+					
+				</div><!-- #option-form-container //-->
+				
+				{if $from_signup eq 'y'}
+	   	<a href="{$BASE_URL}page/thankyou" >SKIP</a>
+	   	{/if}   
+			</div><!-- #foundfriends-content //-->
+</form>	
+			
+			<div class="fix"></div>
+		</div><!-- #content //-->
+	</div><!-- #main-container //-->
+	
+
+
+
+
+
+
+{literal}
+	<script>
+
+//jQuery('#select_checkbox').click(function() {
+
+jQuery('#select_checkbox').click(function() {
+ 
+	jQuery('input:checkbox').each(function() { 
+		if(jQuery('#select_checkbox').is(':checked'))
+		{
+			 if(jQuery(this).attr('name') == 'list_contacts[]' )
+			 {
+				jQuery(".ez-checkbox").addClass("ez-checked");
+				jQuery(this).attr('checked', true);
+			 }
+		}
+		else
+		{			
+			 if(jQuery(this).attr('name') == 'list_contacts[]' )
+			 {
+				jQuery(".ez-checkbox").removeClass("ez-checked");
+				jQuery(this).attr('checked', false);
+			 }
+		}
+	}); 
+});
+</script>
+ <script>    
+function check()
+{
+	var checked = false;
+	jQuery('input:checkbox').each(function() { 
+		if(jQuery(this).attr('name') == 'list_contacts[]' && jQuery(this).is(':checked'))
+		{
+			checked = true; 
+		}
+	});
+	if(!checked)
+	{
+		alert('Please select atleast one friend !');
+	}
+	else
+	{
+		document.getElementById('frm_connect').submit();
+	}
+}
+</script>
+
+{/literal}	
